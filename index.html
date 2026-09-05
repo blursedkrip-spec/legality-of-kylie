@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kylie's 18th Debut Invitation</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+  <canvas id="sparkles"></canvas>
+
+  <audio id="bg-music" loop src="assets/music.mp3"></audio>
+
+  <section class="section hero">
+    <div class="ornate-frame main-frame floating-img">
+      <div class="corner-accent tl">✦</div>
+      <div class="corner-accent tr">✦</div>
+      <div class="corner-accent bl">✦</div>
+      <div class="corner-accent br">✦</div>
+      <div class="frame-border">
+        <img src="assets/kylie1.jpeg" alt="Kylie Main Photo" class="hero-img">
+      </div>
+    </div>
+    
+    <h1 class="celebrant-name shine-text">Kylie</h1>
+    <p class="subtitle">A DECADE AND EIGHT</p>
+    
+    <div class="gold-divider"><span>✦</span></div>
+
+    <div class="event-details fade-in">
+      <p class="gold-sub">SAVE THE DATE</p>
+      <h2 class="date-glow">OCTOBER 17, 2026</h2>
+      <p class="details-text">SATURDAY | 4:00 PM</p>
+      <p class="venue-text">Pales' Place Reception Hall<br>4CGR+2HQ, Liliw, Laguna</p>
+    </div>
+
+    <div class="spotify-player glass-card">
+      <div class="player-header">
+        <span class="sub-header">PLAYING FROM PLAYLIST</span>
+        <h4 class="playlist-title">Kylie's 18th Debut Mix</h4>
+      </div>
+
+      <div class="album-art-wrapper">
+        <img src="assets/kylie5.jpeg" alt="Album Cover" id="player-cover">
+      </div>
+
+      <div class="track-info">
+        <h3 class="track-title" id="track-title">Fashion Killa</h3>
+        <p class="track-artist" id="track-artist">A$AP Rocky</p>
+      </div>
+
+      <div class="progress-container">
+        <input type="range" id="progress-bar" value="0" min="0" max="100">
+        <div class="time-stamps">
+          <span id="current-time">0:00</span>
+          <span id="duration-time">0:00</span>
+        </div>
+      </div>
+
+      <div class="player-controls">
+        <button class="control-btn heart-btn" onclick="toggleLike(this)" title="Like">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </button>
+        <button class="control-btn" title="Previous">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+        </button>
+        <button class="play-main-btn" id="main-play-btn" onclick="toggleAudio()" title="Play/Pause">
+          <svg id="play-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        </button>
+        <button class="control-btn" title="Next">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+        </button>
+        <button class="control-btn" title="Repeat">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 7h10v3l4-4l-4-4v3H5v6h2V7zm10 10H7v-3l-4 4l4 4v-3h12v-6h-2v4z"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5l-8-5h16zm0 12H4V8l8 5l8-5v10z"/></svg>
+    </div>
+    <h2 class="script-heading">Message</h2>
+    
+    <div class="photo-pair">
+      <div class="ornate-frame mini-frame tilt-left hover-lift">
+        <div class="frame-border"><img src="assets/kylie2.jpeg" alt="Kylie Photo 2"></div>
+      </div>
+      <div class="ornate-frame mini-frame tilt-right hover-lift">
+        <div class="frame-border"><img src="assets/kylie3.jpeg" alt="Kylie Photo 3"></div>
+      </div>
+    </div>
+
+    <div class="glass-card framed-card">
+      <p class="message-body">
+        Join us in celebrating a milestone as Kylie steps into womanhood. Your presence will make this enchanting evening truly unforgettable.
+      </p>
+      <p class="signature">— From: Kylie</p>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 20a8 8 0 1 0 0-16a8 8 0 0 0 0 16zm0 2C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10zm1-10h3a1 1 0 0 1 0 2h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 2 0v5z"/></svg>
+    </div>
+    <h2 class="script-heading">Days before my legality</h2>
+    
+    <div class="ornate-frame banner-frame hover-zoom">
+      <div class="frame-border"><img src="assets/kylie4.jpeg" alt="Kylie Photo 4"></div>
+    </div>
+
+    <div id="timer" class="timer-display">
+      <div class="time-box glow-card"><span id="days">00</span><p>DAYS</p></div>
+      <div class="time-box glow-card"><span id="hours">00</span><p>HOURS</p></div>
+      <div class="time-box glow-card"><span id="minutes">00</span><p>MINUTES</p></div>
+      <div class="time-box glow-card"><span id="seconds">00</span><p>SECONDS</p></div>
+    </div>
+  </section>
+
+  <section class="section timeline-section glass-card framed-card">
+    <h2 class="gold-title">DEBUT TIMELINE</h2>
+
+    <div class="centered-timeline">
+      <div class="timeline-spine"></div>
+
+      <div class="timeline-row left">
+        <div class="timeline-label">
+          <span class="event-title">ARRIVAL OF THE GUEST <span class="event-time">(4:00 PM)</span></span>
+        </div>
+        <div class="timeline-node">
+          <div class="node-icon-box">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+          </div>
+        </div>
+        <div class="timeline-empty"></div>
+      </div>
+
+      <div class="timeline-row right">
+        <div class="timeline-empty"></div>
+        <div class="timeline-node">
+          <div class="node-icon-box">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.5 7l-2-3H18.5l-2 3H7.5zM11 13v6H8v2h8v-2h-3v-6l5-7.5V4H4v1.5L9 13z"/></svg>
+          </div>
+        </div>
+        <div class="timeline-label">
+          <span class="event-title">COCKTAIL HOUR <span class="event-time">(4:00 - 4:40 PM)</span></span>
+        </div>
+      </div>
+
+      <div class="timeline-row left">
+        <div class="timeline-label wide-label">
+          <span class="event-title">PROGRAM PRELIMINARIES <span class="event-time">(4:40 PM)</span></span>
+        </div>
+        <div class="timeline-node">
+          <div class="node-icon-box">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+          </div>
+        </div>
+        <div class="timeline-empty"></div>
+      </div>
+
+      <div class="timeline-row right">
+        <div class="timeline-empty"></div>
+        <div class="timeline-node">
+          <div class="node-icon-box">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L15 8L21 9L16.5 13.5L18 19.5L12 16.5L6 19.5L7.5 13.5L3 9L9 8L12 2Z"/></svg>
+          </div>
+        </div>
+        <div class="timeline-label">
+          <span class="event-title">THE DEBUT PROGRAM <span class="event-time">(4:55 PM)</span></span>
+        </div>
+      </div>
+
+      <div class="timeline-row left">
+        <div class="timeline-label">
+          <span class="event-title">DINNER <span class="event-time">(6:20 PM)</span></span>
+        </div>
+        <div class="timeline-node">
+          <div class="node-icon-box">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.55 3.89 3.57 4.19L6.5 22h3l-.07-8.81C11.45 12.89 13 11.12 13 9V2h-2v7zm5-7v8h2.5v12h3V2H16z"/></svg>
+          </div>
+        </div>
+        <div class="timeline-empty"></div>
+      </div>
+
+      <div class="timeline-row right">
+        <div class="timeline-empty"></div>
+        <div class="timeline-node">
+          <div class="node-icon-box">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="timeline-label">
+          <span class="event-title">PROGRAM RESUMES <span class="event-time">(6:35 PM)</span></span>
+        </div>
+      </div>
+
+      <div class="timeline-row left">
+        <div class="timeline-label">
+          <span class="event-title">SDE VIDEO <span class="event-time">(8:15 PM)</span></span>
+        </div>
+        <div class="timeline-node">
+          <div class="node-icon-box">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+          </div>
+        </div>
+        <div class="timeline-empty"></div>
+      </div>
+
+      <div class="timeline-row right">
+        <div class="timeline-empty"></div>
+        <div class="timeline-node">
+          <div class="node-icon-box">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 21l3.54-1.18C9.38 20.53 10.66 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-1.1 0-2.16-.3-3.08-.85l-.22-.13-2.1.7.7-2.05-.15-.24C6.58 15.42 6 13.78 6 12c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6z"/></svg>
+          </div>
+        </div>
+        <div class="timeline-label">
+          <span class="event-title">PARTY <span class="event-time">(8:30 PM)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gold-time-footer">
+      <div class="gold-beveled-card interactive-float">
+        <span class="time-heading">4:00 PM</span>
+        <span class="time-subtext">Arrival of Guest</span>
+      </div>
+
+      <div class="gold-beveled-card interactive-float">
+        <span class="time-heading">4:40 PM</span>
+        <span class="time-subtext">Program Begins</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+    </div>
+    <div class="badge-gold hover-glow">LOCATION GUIDE</div>
+    <div class="map-frame glass-card framed-card">
+      <iframe src="https://maps.google.com/maps?q=Pales'+Place+Reception+Hall+Liliw+Laguna&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <p class="venue-address">Pales' Place Reception Hall<br>4CGR+2HQ, Liliw, Laguna</p>
+      <a href="https://maps.google.com/?cid=16068245403091903811" target="_blank" class="map-link-btn">OPEN IN GOOGLE MAPS</a>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/></svg>
+    </div>
+    <h2 class="script-heading">18 Specials</h2>
+
+    <div class="specials-tabs">
+      <button class="tab-btn active" onclick="switchTab(event, 'roses')">🌹 Roses</button>
+      <button class="tab-btn" onclick="switchTab(event, 'treasures')">🎁 Treasures</button>
+      <button class="tab-btn" onclick="switchTab(event, 'shots')">🥂 Shots</button>
+      <button class="tab-btn" onclick="switchTab(event, 'bluebills')">💵 Blue Bills</button>
+    </div>
+
+    <div id="roses" class="tab-content active glass-card framed-card">
+      <div class="special-card-header">
+        <span class="special-icon">🌹</span>
+        <h3 class="special-title">18 Roses</h3>
+      </div>
+      <ol class="specials-list">
+        <li>RJ Tuala</li>
+        <li>Thyron Lugada</li>
+        <li>Axel Brena</li>
+        <li>Willy Dimayacya</li>
+        <li>Ron Monfero</li>
+        <li>Ace Brena</li>
+        <li>Yuan Lugada</li>
+        <li>Razell Coroza</li>
+        <li>Joshua Plata</li>
+        <li>Daryle Panaglima</li>
+        <li>Weeland Celeridad</li>
+        <li>Adriel Panaglima</li>
+        <li>Maru Montecastro</li>
+        <li>Niel Lazatin</li>
+        <li>Kyle Panaglima</li>
+        <li>Andrew Jake</li>
+        <li>Tony Panaglima</li>
+      </ol>
+    </div>
+
+    <div id="treasures" class="tab-content glass-card framed-card">
+      <div class="special-card-header">
+        <span class="special-icon">🎁</span>
+        <h3 class="special-title">18 Treasures</h3>
+      </div>
+      <ol class="specials-list">
+        <li>Samantha Matanggihan</li>
+        <li>Leira Mañores</li>
+        <li>Mary Pauleen</li>
+        <li>Harlie Panaglima</li>
+        <li>Angel Navarro</li>
+        <li>Cherian Plata</li>
+        <li>Nads Dimayacyac</li>
+        <li>Eunice Estonilo</li>
+        <li>Aira Panaglima</li>
+        <li>Zedrick Arnuco</li>
+        <li>Onachy Borgoños</li>
+        <li>Sophie Kabamalan</li>
+        <li>Mags Rafael</li>
+        <li>Elora Agapay</li>
+        <li>Bianca Sollodin</li>
+        <li>Ren Montecastro</li>
+        <li>Mitch</li>
+        <li>Lady Ann Tuala</li>
+      </ol>
+    </div>
+
+    <div id="shots" class="tab-content glass-card framed-card">
+      <div class="special-card-header">
+        <span class="special-icon">🥂</span>
+        <h3 class="special-title">18 Shots</h3>
+      </div>
+      <ol class="specials-list">
+        <li>Mia Palattao</li>
+        <li>Kim Rafael</li>
+        <li>Rana Borlaza</li>
+        <li>Marianne Arvesu</li>
+        <li>Clarck Paguito</li>
+        <li>Yoseff Lugada</li>
+        <li>Gemsy Vitervo</li>
+        <li>Levin Untivero</li>
+        <li>Rylan Agdon</li>
+        <li>RJ Argao</li>
+        <li>Marco Dorado</li>
+        <li>Celevien Hernandez</li>
+        <li>Jhon Nico Platero</li>
+        <li>Pauleen Acuña</li>
+        <li>Andrei Rodanillio</li>
+        <li>Kyla Duller</li>
+        <li>Rhem Charles</li>
+        <li>Stephanie Panaglima</li>
+      </ol>
+    </div>
+
+    <div id="bluebills" class="tab-content glass-card framed-card">
+      <div class="special-card-header">
+        <span class="special-icon">💵</span>
+        <h3 class="special-title">18 Blue Bills</h3>
+      </div>
+      <ol class="specials-list">
+        <li>Chona Kabamalan</li>
+        <li>Gina Dator</li>
+        <li>Eduardo Manalang</li>
+        <li>Norman Agapay</li>
+        <li>Anyana Coroza</li>
+        <li>Kenneth Tuala</li>
+        <li>Lea Brena</li>
+        <li>Katkat Panaglima</li>
+        <li>Khaycee Panaglima</li>
+        <li>Vangie Lugada</li>
+        <li>Shali Arvesu</li>
+        <li>Tetchie Casas</li>
+        <li>Lauren Brosas</li>
+        <li>Nicole Gail</li>
+        <li>Katrina Sugaste</li>
+        <li>Evangeline Sollodin</li>
+        <li>Adolfo Brena</li>
+        <li>Keith Ann Lugada</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c1.1 0 2 .9 2 2c0 .74-.4 1.38-1 1.72V7h3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3V5.72C10.4 5.38 10 4.74 10 4c0-1.1.9-2 2-2z"/></svg>
+    </div>
+    
+    <h2 class="gold-title">Attire & Dress Code</h2>
+
+    <div class="attire-icon-badge">
+      <svg class="attire-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 10C34.2091 10 36 8.20914 36 6C36 3.79086 34.2091 2 32 2C29.7909 2 28 3.79086 28 6C28 8.20914 29.7909 10 32 10Z" stroke="url(#goldGradient)" stroke-width="2.5"/>
+        <path d="M32 10V16M20 16H44L48 28H40V60H24V28H16L20 16Z" stroke="url(#goldGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M28 16L32 22L36 16" stroke="url(#goldGradient)" stroke-width="2" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f5d061"/>
+            <stop offset="50%" stop-color="#e6b84c"/>
+            <stop offset="100%" stop-color="#99701e"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <p class="attire-note">Semi-Formal Attire. Please strictly follow our color palette:</p>
+
+    <div class="color-palette">
+      <div class="swatch-wrapper">
+        <span class="swatch white-swatch hover-pulse"></span>
+        <p class="color-label">WHITE</p>
+      </div>
+      <div class="swatch-wrapper">
+        <span class="swatch silver-swatch hover-pulse"></span>
+        <p class="color-label">SILVER</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rsvp-section glass-card framed-card">
+    
+    <div class="header-icon-container">
+      <div class="plus-icon-box">+</div>
+    </div>
+
+    <h2 class="gold-title">RSVP</h2>
+    <p class="rsvp-subtext">Please confirm your attendance on or before September 17, 2026</p>
+
+    <form id="rsvp-form" class="rsvp-form" onsubmit="submitRSVP(event)">
+      <div class="form-group">
+        <label for="full-name">FULL NAME</label>
+        <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="attendance">WILL YOU BE ATTENDING?</label>
+        <select id="attendance" name="attendance" required>
+          <option value="Joyfully Accepts" selected>Joyfully Accepts</option>
+          <option value="Regretfully Declines">Regretfully Declines</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="guest-count">NUMBER OF GUESTS</label>
+        <input type="number" id="guest-count" name="guestCount" min="1" max="10" value="1" required />
+      </div>
+
+      <div id="guest-names-container" class="guest-names-container"></div>
+
+      <div id="rsvp-message" style="display:none; color: #f5d061; margin-top: 15px; text-align: center;"></div>
+
+      <button type="submit" class="submit-btn">SUBMIT RSVP</button>
+    </form>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
